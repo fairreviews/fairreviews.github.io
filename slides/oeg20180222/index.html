@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>FAIR* Reviews</title>
+
+		<link rel="stylesheet" href="./oeg/css/reveal.css">
+		<link rel="stylesheet" href="./oeg/css/theme/white.css">
+		<link rel="stylesheet" href="./oeg/css/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./oeg/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './oeg/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+        <script src="https://use.fontawesome.com/a27eeff0d2.js"></script>
+	</head>
+	<body>
+        <ul class="oeghead">
+          <li class="oeghead"><a class="isologo" href="http://www.oeg-upm.net/">OEG</a></li>
+          <li class="oeghead"><a href="http://fairreviews.linkeddata.es/">FAIR* Reviews</a></li>
+        </ul>
+        
+        
+		<div class="reveal">
+			<div class="slides oegslide">
+				<section id="landing">
+                    <img class="banner-m" src="img/logodoc.png">
+                    <p class="contact"><i class="fa fa-twitter" aria-hidden="true"></i><a href="https://twitter.com/fair_reviews">@fair_reviews</a></p>
+                    <h4 class="title">Scientific Reviews as Linked Data</h4>
+                    <hr>
+                    
+                    <p class="author"><a href="http://w3id.org/people/idafensp">Idafen Santana-Perez</a></p>
+                    <p class="contact">
+				        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:isantana@fi.upm.es">isantana@fi.upm.es</a>
+				        <i class="ai ai-orcid" aria-hidden="true"></i> <a href="http://orcid.org/0000-0001-8296-8629">0000-0001-8296-8629</a>
+                        <i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/idafensp">@idafensp</a>
+				    </p>
+                    <p class="author"><a href="http://w3id.org/people/mpoveda">Mar&iacute;a Poveda-Villal&oacute;n</a></p>
+                    <p class="contact">
+				        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mpoveda@fi.upm.es">mpoveda@fi.upm.es</a>
+				        <i class="ai ai-orcid" aria-hidden="true"></i> <a href="http://orcid.org/0000-0003-3587-0367">0000-0003-3587-0367</a>
+				        <i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/MariaPovedaV">@MariaPovedaV</a>
+				    </p>
+                    <p class="contact"><a href="http://www.oeg-upm.net/"><strong>Ontology Engineering Group</strong></a> - <a href="http://www.upm.es/"><strong>Universidad Polit&eacute;cnica de Madrid</strong></a></p>
+                    
+                </section>
+				<section id="intro1">
+                    <h2>What is a review?</h2>
+                    
+                </section>
+				<section id="intro2">
+                    <h2>What is a review?</h2>
+                    <ul>
+                        <li>Outcome of the review process</li>
+                        <li>Cornerstone of the scientific process... &quot;lately&quot;</li>
+                        <li>Assess the validity of a contribution</li>
+                        <li>But not only that&hellip;</li>
+                        <ul>
+                            <li>Novelty</li>
+                            <li>Relevance</li>
+                            <li>Quality</li>
+                            <li><strong>Sutiability for publication</strong></li>
+                        </ul>
+                    </ul>
+                </section>
+				<section id="intro3">
+                    <h2>Not everyone liked it...</h2>
+                    <img src="img/einstein1.png" width="80%">
+                   
+                </section>
+                
+                
+				<section id="intro4" data-transition="fade">
+                    <h2>Not everyone liked it...</h2>
+                    <img src="img/einstein2.png" width="80%">
+                    <ul>
+                        <p class="oeg-text-m">Einstein Versus the Physical Review <i class="ai ai-doi" aria-hidden="true"></i> <a href="http://physicstoday.scitation.org/doi/10.1063/1.2117822"> 10.1063/1.2117822</a>
+                        </p>
+                    </ul>
+                    
+                </section>
+				<section id="intro5">
+                    <h3>It is not a perfect system&hellip;</h3>
+                    <ul>
+                        <li>We produce <strong>millions</strong> of reviews</li>
+                        <li>The process is mostly closed</li>
+                        <ul>
+                            <li>Open Review</li>
+                            <ul>
+                                <li>Trust</li>
+                                <li>Accountability</li>
+                            </ul>
+                        </ul>
+                        <li><strong>What happens to reviews afterwards?</strong></li>
+                        <p class="oeg-center">
+                            <a href="https://commons.wikimedia.org/wiki/File:Cestino_pieno_architetto_01.svg">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Cestino_pieno_architetto_01.svg">
+                            </a>
+                        </p>
+                    </ul>
+                </section>
+                
+				<section id="goal">
+                    <h2>Our goal</h2>
+                    <ul>
+                        <li>Expose the <strong>knowledge</strong> of a scientific review</li>
+                        <ul>
+                            <li>An study conducted by an expert in the topic</li>
+                        </ul>
+                        <li>Open Reviews as Linked Data</li>
+                        <ul>
+                            <li>General-purpose model</li>
+                            <li>Allows specialization</li>
+                        </ul>
+                        <li>Structure the review and its contents</li>
+                        <ul>
+                            <li><a href="https://w3id.org/fr/def/core#content">Textual content</a></li>
+                            <li><a href="https://w3id.org/fr/def/core#RatingConcept">Ratings </a></li>
+                            <li><a href="https://w3id.org/fr/def/core#ConfidenceConcept">Confidence</a></li>
+                        </ul>
+                    </ul>
+                </section>
+                
+				<section id="us">
+                    <h2><span style="color:DarkBlue">FAIR<span style=" color:Gold">*</span> Reviews</span></h2>
+                    <ul>
+                        <li>An <strong>ontology</strong> and a <strong>platform</strong> for publishing scientific reviews as <strong>Linked Data</strong></li>
+                        <ul>
+                            <li>FAIR as in FAIR Data Principles</li>
+                            <li>We are <strong>inspired</strong> by FDP</li>
+                            <ul>
+                                <li><strong>Findable:</strong> URIs
+                                <li><strong>Accessible:</strong> public metadata
+                                <li><strong>Interoperable:</strong> standard vocabularies
+                                <li><strong>Reusable:</strong> public license
+                            </ul>
+                        </ul>
+                    </ul>
+                </section>
+                
+				<section id="name">
+                    <h2>The name</h2>
+                    <ul>
+                        <li>We know is controversial...</li>
+                        <ul>
+                            <li>FAIRification</li>
+                            <ul><li><a hred="https://github.com/fairreviews/vocab/issues/8">https://github.com/fairreviews/vocab/issues/8</a></li></ul>
+                            <li>Open &ne; FAIR &ne; fair</li>
+                            <li>It is catchy</li>
+                            <li>We already have the logo...<i style=" color:Tomato" class="fa fa-heart"></i></li>
+                        </ul>
+                        
+                    </ul>
+                </section>
+				
+				<section id="ontology">
+                    <h3>The <span style="color:DarkBlue">FAIR<span style=" color:Gold">*</span> Reviews</span> Ontology</h3>
+                        <map name="GraffleExport">
+                        <area shape=rect coords="584,198,745,221" href="https://w3id.org/fr/def/core#Reply">
+                        <area shape=rect coords="496,89,634,112" href="https://w3id.org/fr/def/core#content">
+                        <area shape=rect coords="62,500,258,523" href="https://w3id.org/fr/def/core#confidenceValue">
+                        <area shape=rect coords="62,474,258,501" href="https://w3id.org/fr/def/core#ConfidenceConcept">
+                        <area shape=rect coords="348,527,485,569" href="https://w3id.org/fr/def/core#DiscreteConfidenceConceptScheme">
+                        <area shape=rect coords="303,475,438,512" href="https://w3id.org/fr/def/core#ConfidenceConceptScheme">
+                        <area shape=rect coords="62,613,226,636" href="https://w3id.org/fr/def/core#ratingValue">
+                        <area shape=rect coords="62,586,226,614" href="https://w3id.org/fr/def/core#RatingConcept">
+                        <area shape=rect coords="346,627,453,669" href="https://w3id.org/fr/def/core#DiscreteRatingConceptScheme">
+                        <area shape=rect coords="303,586,466,609" href="https://w3id.org/fr/def/core#RatingConceptScheme">
+                        <area shape=rect coords="202,348,356,371" href="https://w3id.org/fr/def/core#ConveningOrganization">
+                        <area shape=rect coords="112,198,286,221" href="https://w3id.org/fr/def/core#Review">
+                        <area shape=rect coords="113,393,227,416" href="https://w3id.org/fr/def/core#TrackingSystem">
+                        </map>
+                        <img border=0 src="img/fr-vocab/fr-vocab.jpg" width="600" usemap="#GraffleExport">
+                </section>
+                <section id="skos-1">
+                    <h3>SKOS modelling - Confidence</h3>
+
+                        <img border=0 src="img/fr-vocab/fr-skos.jpg" width="330">
+                </section>
+                <section id="skos-2">
+                    <h3>SKOS modelling - Rating</h3>
+
+                        <img border=0 src="img/fr-vocab/fr-rating.jpg" width="750">
+                </section>
+                <section id="ex-html">
+                    <h3>HTML published review</h3>
+                        <a href="https://w3id.org/fr/resource/rev/1"><img border=0 src="img/fr-vocab/fr-ej-doc.png" width="520"> </a>
+                </section>
+                <section id="ex-graph">
+                    <h3>RDF for the published review</h3>
+
+                        <img border=0 src="img/fr-vocab/fr-ej.jpg" width="600">
+                </section>
+                
+                
+                
+				<section id="platform">
+                    <section id="platform1">
+                        <h3>The <span style="color:DarkBlue">FAIR<span style=" color:Gold">*</span> Reviews</span> Platform</h3>
+                        <ul>
+                            <li>Linked Data publishers for reviews</li>
+                            <li>Following some criteria</li>
+                            <ul>
+                                <li>ORCID login for reviewers <i class="fa fa-check oeg-ok"></i></li>
+                                <ul>
+                                    <li>ORCID review workflow <i class="fa fa-times oeg-not-ok"></i></li>
+                                </ul>
+                                <li>Valid DOI for papers <i class="fa fa-check oeg-ok"></i></li>
+                                <li>Valid conference URL/URI <i class="fa fa-times oeg-not-ok"></i></li>
+                                <li>Reconcile with <a href="http://opencitations.net/">OpenCitations</a> <i class="fa fa-times oeg-not-ok"></i></li>
+                            </ul>
+                            <li>Support for LD generation without publishing it</li>
+                        </ul>
+                    </section>
+                    <section id="platform2">
+                        <h3>The <span style="color:DarkBlue">FAIR<span style=" color:Gold">*</span> Reviews</span> Platform</h3>
+                        
+                        <p>
+                            (Private) Beta version
+                        </p>
+                        <p>
+                            <a href="http://beta.fairreviews.linkeddata.es/frserver/"  target="_blank">beta.fairreviews.linkeddata.es</a>
+                        </p>
+                        <img src="img/platform.png" width="80%">
+                    </section>
+                    <section id="platform3">
+                        <h3>The <span style="color:DarkBlue">FAIR<span style=" color:Gold">*</span> Reviews</span> Platform</h3>
+                        
+                        <h2><i class="fa fa-exclamation-triangle oeg-not-ok"></i></h2><h2>Doesn't work yet...</h2>
+                        <h4>Stay tunned</h4>
+                    </section>
+                </section>
+
+                <section id="prereview">
+                    <h3>Outreach: the good <i class="fa fa-thumbs-o-up"></i></h3>
+                    <ul>
+                        <li>PreReview</li>
+                        <ul>
+                            <li><a href="https://www.prereview.org/>">prereview.org</a></li>
+                            <li>Journal club for pre-print papers</li>
+                                <ul><li>reviews when they are useful</li></ul>
+                            <li>Biology domain</li>
+                            <li>Willing to do something together</li>
+                            <li>Many links: OpenCon &amp; Mozilla</li>
+                        </ul>
+                    </ul>
+                </section>   
+
+                <section id="spar">
+                    <h3>Outreach: the better <i class="fa fa-thumbs-o-up"></i></h3>
+                    <ul>
+                        <li>SPAR ontologies: there we go!</li>
+                        <ul>
+                            <li><a href="http://www.sparontologies.net/">sparontologies.net</a></li>
+                            <li>Ontologies for describing the main aspects of publishing domain</li>
+                            <li>Community adoption, broadly used</li>
+                            <li>Many changes... rules about modelling, domain, ranges, move skos to another module (BIDO)</li>
+                        </ul>
+                        <li>Soon we will be part of the SPAR family <i class="fa fa-smile-o"></i></li>
+                    </ul>
+                </section>   
+                
+                
+
+                <section id="nextsteps">
+                    <h3>Next Steps</h3>
+                    <ul>
+                        <li>Specilize reviews</li>
+                        <ul>
+                            <li>Subclasses</li>
+                            <li>Structured reviews, classifying content</li>
+                        </ul>
+                        <li>Finish with the FR2SPAR migration</li>
+                        <ul>
+                            <li>Move SKOS to BiDO</li>
+                            <li>Follow the <a href="https://sparontologies.github.io/">SPAR guidelines</a></li>
+                        </ul>
+                        <li>Community engagement</li>
+                    </ul>
+                </section>   
+
+                <section id="discussion">
+                    <h3>Open opportunities</h3>
+                    <ul>
+                        <li>What would you do if you have structured reviews available?</li>
+                        <li>Would you open your reviews?</li>
+                        <li>Would you implement this approach in your events? Contact us in that case...</li>
+                        <li>Any other comment/feedback/doubt/suggestion/big applause?</li>
+                    </ul>
+                </section>
+                
+				<section id="landing">
+                    <img class="banner-m" src="img/logodoc.png">
+                    <p class="contact"><i class="fa fa-twitter" aria-hidden="true"></i><a href="https://twitter.com/fair_reviews">@fair_reviews</a></p>
+                    <h4 class="title">Scientific Reviews as Linked Data</h4>
+                    <hr>
+                    
+                    <p class="author"><a href="http://w3id.org/people/idafensp">Idafen Santana-Perez</a></p>
+                    <p class="contact">
+				        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:isantana@fi.upm.es">isantana@fi.upm.es</a>
+				        <i class="ai ai-orcid" aria-hidden="true"></i> <a href="http://orcid.org/0000-0001-8296-8629">0000-0001-8296-8629</a>
+                        <i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/idafensp">@idafensp</a>
+				    </p>
+                    <p class="author"><a href="http://w3id.org/people/mpoveda">Mar&iacute;a Poveda-Villal&oacute;n</a></p>
+                    <p class="contact">
+				        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mpoveda@fi.upm.es">mpoveda@fi.upm.es</a>
+				        <i class="ai ai-orcid" aria-hidden="true"></i> <a href="http://orcid.org/0000-0003-3587-0367">0000-0003-3587-0367</a>
+				        <i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/MariaPovedaV">@MariaPovedaV</a>
+				    </p>
+                    <p class="contact"><a href="http://www.oeg-upm.net/"><strong>Ontology Engineering Group</strong></a> - <a href="http://www.upm.es/"><strong>Universidad Polit&eacute;cnica de Madrid</strong></a></p>
+                    
+                    
+                </section>
+                
+                
+                
+                <section id="applause" data-background="img/aplausos.gif">
+						<h2 style="color:white">applause time!</h2>
+				</section>
+                
+			</div>
+		</div>
+        
+        <div class="footer">
+          <p>Ontology Engineering Group - <a class="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></p>
+        </div>
+
+		<script src="./oeg/lib/js/head.min.js"></script>
+		<script src="./oeg/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: './oeg/plugin/markdown/marked.js' },
+					{ src: './oeg/plugin/markdown/markdown.js' },
+					{ src: './oeg/plugin/notes/notes.js', async: true },
+					{ src: './oeg/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
